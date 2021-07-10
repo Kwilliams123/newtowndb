@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "177333584690",
+    "firebase_url": "https://newtowndb-5a189.firebaseio.com",
+    "project_id": "newtowndb-5a189",
+    "storage_bucket": "newtowndb-5a189.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177333584690:android:b8a1d6c32b33875de28d2b",
+        "android_client_info": {
+          "package_name": "com.mcgod.newtowndb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177333584690-rsevnimrb5bk1bgqhi6a643h0n38v69a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mcgod.newtowndb",
+            "certificate_hash": "4a3f1efe1432bbb58c911f3649e8c2a63301167c"
+          }
+        },
+        {
+          "client_id": "177333584690-6lqjltbtr1cbbnur9bsgua8tehma4snm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1E2eP7MCPBb0P7DN5LZPUx9dJOR5LVUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177333584690-6lqjltbtr1cbbnur9bsgua8tehma4snm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

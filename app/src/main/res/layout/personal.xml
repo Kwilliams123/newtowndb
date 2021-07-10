@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/person"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<com.google.android.material.appbar.AppBarLayout
+android:layout_width="match_parent"
+    android:id="@+id/appBar"
+android:layout_height="300dp"
+    >
+
+
+<com.google.android.material.appbar.CollapsingToolbarLayout
+    android:id="@+id/collapsing_toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:contentScrim="?attr/colorPrimary"
+    app:expandedTitleGravity="top"
+    app:expandedTitleMarginStart="48dp"
+    app:expandedTitleMarginEnd="64dp"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <ImageView
+        android:id="@+id/expandedImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="#009"
+        app:layout_collapseMode="parallax"
+        app:layout_collapseParallaxMultiplier="0.7" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"/>
+</com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        app:layout_anchor="@id/appBar"
+        android:onClick="takePicture"
+        app:layout_anchorGravity="bottom|center"
+        android:src="@drawable/ic_baseline_photo_camera_24"
+        android:layout_height="wrap_content"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/personal"
+        android:visibility="visible"
+        android:background="@drawable/t"
+        android:paddingTop="50dp"
+
+        android:fillViewport="true"
+
+        app:behavior_overlapTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Name"
+            android:inputType="textNoSuggestions|textCapWords"></EditText>
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:drawableRight="@drawable/ic_baseline_contacts_24"
+            android:hint="Contact"
+            android:inputType="phone"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+
+                android:hint="Dob Eg. 24/6/2000"
+                android:inputType="datetime"></EditText>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="Pick date"
+                android:background="#eee"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:onClick="pickDate"
+                android:gravity="center"
+                android:drawableRight="@drawable/ic_calendar_one"
+                android:layout_height="match_parent"></TextView>
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="19sp"
+            android:text="Gender"
+            android:gravity="center"
+            android:textColor="#008"
+            android:layout_height="50dp"></TextView>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:id="@+id/gender"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Male"
+                android:id="@+id/male"
+                android:layout_height="wrap_content"></RadioButton>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Female"
+                android:id="@+id/female"
+                android:layout_height="wrap_content"></RadioButton>
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp"
+        android:id="@+id/social"
+        android:background="@drawable/t"
+        android:visibility="invisible"
+        android:fillViewport="true"
+        app:behavior_overlapTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/occupation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Occupution"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/ic_baseline_work_24"
+            android:inputType="textNoSuggestions|textCapWords"></EditText>
+
+        <TextView
+            android:id="@+id/marital"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawablePadding="15dp"
+            android:textColor="#008"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_baseline_wc_24"
+            android:text="Marital Status"
+            android:inputType="phone"></TextView>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/mstatus"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Married"
+                android:id="@+id/m"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Single"
+                android:id="@+id/s"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Divorced"
+                android:id="@+id/d"
+                android:layout_height="wrap_content"></RadioButton>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="Widow(er)"
+                android:id="@+id/w"
+                android:layout_height="wrap_content"></RadioButton>
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:drawablePadding="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:hint="location, GPS "></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spiritual"
+        android:background="@drawable/t"
+        android:visibility="invisible"
+        android:paddingTop="50dp"
+        android:fillViewport="true"
+
+        app:behavior_overlapTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:textColor="#008"
+            android:layout_marginTop="50dp"
+            android:text="Have you been baptized in water?"></TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:id="@+id/baptized"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="YES"
+                android:id="@+id/baptized_yes"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="NO"
+                android:id="@+id/baptized_no"
+                android:layout_height="wrap_content"></RadioButton>
+
+        </RadioGroup>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#008"
+            android:layout_marginTop="25dp"
+            android:text="Do you speak in tongues ?"
+            android:inputType="phone"></TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:id="@+id/baptized_spirit"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="YES"
+                android:id="@+id/baptized_spirit_yes"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:text="NO"
+                android:id="@+id/baptized_spirit_no"
+                android:layout_height="wrap_content"></RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_height="30dp">
+
+            <View
+                android:id="@+id/first"
+                android:layout_gravity="center"
+                android:background="@drawable/pager_checked"
+                android:layout_height="9dp"
+                android:layout_width="9dp"></View>
+
+
+            <View
+                android:id="@+id/second"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pager_round"
+                android:layout_height="7dp"
+                android:layout_width="7dp"></View>
+
+            <View
+                android:id="@+id/third"
+                android:layout_marginLeft="4dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pager_round"
+                android:layout_height="7dp"
+                android:layout_width="7dp"></View>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="Next"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/ic_baseline_navigate_next_24"
+            android:textSize="18sp"
+            android:onClick="nexts"
+            android:id="@+id/next"
+            android:textColor="#009"
+            android:layout_marginBottom="29dp"
+            android:layout_height="wrap_content"></TextView>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

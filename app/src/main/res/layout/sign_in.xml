@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#008">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="The Church of Pentecost"
+        android:layout_height="wrap_content"></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Ashaiman Newtown"
+        android:layout_height="wrap_content"></TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="19sp"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Youth Database"
+        android:layout_height="wrap_content"></TextView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/t"
+        android:layout_marginTop="70dp"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/username"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#eee"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5dp"
+            android:hint="Email"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:layout_marginTop="70dp"
+            android:layout_height="50dp"></EditText>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#eee"
+            android:paddingLeft="5dp"
+            android:hint="Password"
+            android:drawablePadding="15dp"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:layout_marginTop="150dp"
+            android:layout_height="50dp"></EditText>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@color/fav"
+            android:text="Sign Up"
+            android:textColor="#fff"
+            android:onClick="signUp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp"></Button>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

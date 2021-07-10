@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="header_height">70dp</dimen>
+    <dimen name="next_height">9dp</dimen>
+    <dimen name="on_height">9dp</dimen>
+</resources>

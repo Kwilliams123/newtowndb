@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="50dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/names"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:layout_marginRight="70dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="73dp"
+        android:text="Konadu Akwasi Williams"
+        android:layout_height="wrap_content"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#eee"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="73dp"
+        android:layout_height="1dp"></View>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#00f"
+        android:id="@+id/bases"
+        android:layout_marginTop="10dp"
+        android:text="25 yrs"
+        android:layout_marginRight="5dp"
+
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="0241539561"
+        android:layout_marginLeft="73dp"
+        android:id="@+id/numbers"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="35dp"
+        android:id="@+id/images"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/ic_b"
+        android:layout_height="35dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+</RelativeLayout>

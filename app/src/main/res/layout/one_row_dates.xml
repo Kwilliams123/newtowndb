@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="60dp"
+   android:orientation="vertical"
+    android:layout_marginLeft="30dp"
+    android:background="#fff"
+    android:layout_marginTop="10dp"
+    android:layout_height="60dp">
+    <TextView
+        android:layout_width="40dp"
+        android:text="24"
+        android:textSize="21sp"
+        android:id="@+id/day"
+        android:textColor="#008"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"></TextView>
+
+
+    <TextView
+        android:layout_width="35dp"
+        android:text="Wed"
+        android:id="@+id/week"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#063661"
+        android:layout_height="wrap_content"></TextView>
+
+</LinearLayout>
